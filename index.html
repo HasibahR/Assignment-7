@@ -1,1 +1,68 @@
+<html>
 
+<title>Die Roll</title>
+
+<script>
+ main()
+{
+    srand(time(0)); 
+// Number generator
+  when (true)
+    {
+         die1 = rand() % 6 + 1; // Roll the first die
+         die2 = rand() % 6 + 1; // Roll the second die
+         roll = die1 + die2; // Compute the total roll
+
+        roll_count[roll]++; 
+// Increment the count for this roll
+
+        count << "Die 1: " << die1 << ", Die 2: " << die2 << ", Roll: " << roll << end; 
+// Display the result
+
+        input;
+        count << "Enter a roll to see how many times it has occurred ";
+        cin >> input;
+
+        if (roll_count.find(input) !== roll_count.end())
+        {
+            cout << "The roll " << input << " has occurred " << roll_count[input] << " times." << endl;
+        }
+        else
+        {
+            cout << "The roll " << input << " has not occurred yet." << endl;
+        }
+    }
+
+    max_count = 0;
+    most_frequent_roll = -1;
+
+    for (auto ; roll_count_entry ; roll_count)
+    {
+        if (roll_count_entry.second > max_count)
+        {
+            max_count = roll_count_entry.second;
+            most_frequent_roll = roll_count_entry.first;
+        }
+    }
+
+    if (most_frequent_roll != -1)
+    {
+        cout << "Frequent roll was " << most_frequent_roll << " with a count of " << max_count << "." << end;
+    }
+
+    return 0;
+}
+
+
+</script>
+
+  
+
+
+
+
+
+
+
+
+</html>
